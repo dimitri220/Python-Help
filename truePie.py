@@ -18,13 +18,13 @@ print("Hello, what is your name?")
 name = input() 
 print('\n')
 print('\n')
-print("Hello" + '  ' + name + '\n' + '\n'+ "That is a nice name.")
+print("Hello" + '  ' + name + '\n' + '\n'+ "That is a nice name." + ' ' + name)
 print('\n')
 print("Would you like to solve a math problem by" + ' ' + name +"?")
 print('\n')
 print('\n')
 
-number = input ("Enter number to solve for pie:" + '  ') 
+number = input ("Enter a number to solve for pie:" + '  ') 
  
 
 
