@@ -23,10 +23,10 @@ print("Would you like to solve a math problem by" + ' ' + name +"?")
 print('\n')
 print('\n')
 
+while True:
+    try: 
 
-try: 
-    while True:
         number = input ("Enter number to solve for pie:" + '  ') 
         print(calculation(int(number)))
-except: 
-    print('Must use numerical character for calculation')
+    except: 
+        print('Must use numerical character for calculation')
