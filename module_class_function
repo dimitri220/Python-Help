@@ -1,0 +1,22 @@
+from  mathk import *
+
+
+mat = Calcu()
+mat.add(5,6)
+print(mat.add(5,6))
+
+# This is accessing the class and naming the variable to access the class and to bind or pass through
+#to the method. 
+
+
+#They must be in same file directory in order to be called or otherwise imported 
+
+#Now this code will be the library.
+# make sure you are using self in the constructor to initiate the method with the constructor
+class Calcu:
+
+    def add(self,number_one, number_two):
+        x =  number_one + number_two
+        return   x
+
+
