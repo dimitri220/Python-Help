@@ -1,0 +1,75 @@
+class LeibClass:
+    """A class for use with Leibniz formula"""
+    # Attributes
+    valuelist = []
+
+    # Methods
+    def __init__(self, x):
+        """Creates a string of of pi values using Leibniz formula."""
+        pi,numer = 0, 4.0
+        for i in range(x):
+          denom = (2*i+1)
+          term = numer/denom
+          if i%2:
+            pi -= term
+          else:
+            self.valuelist.append(pi)
+            pi += term
+            
+
+    def get_leib_list(self):
+        """Displays the values in the list."""
+        print(self.valuelist)
+
+    def search_leib_list(self, y):
+        """Does a sequential search of the list."""
+        n = len(self.valuelist)
+        found = False
+        for a in range(n):
+            if self.valuelist[a] == y:
+                found = True
+                index = a
+        if found is True:
+            print(str(y) + " found at index " + str(index))
+        else:
+            print(str(y) + " not found ")
+
+
+
+
+
+# Import the needed class
+import LeibnizClass
+  
+def errorMessages():
+  print("You entered an invalid value. You must enter a positive integer")
+  main()
+  
+def main():
+  print("Please enter the number of values to be calculated:")
+  response = input
+  try:
+      response = int(input())
+  except ValueError:
+      errorMessages()
+  else:
+    if response <=0:
+      errorMessages()
+    else:
+        f = LeibnizClass.LeibClass(response)
+        # Collect the number to search for
+        print("Please enter a number to search for: ")
+        response = input()
+        try:
+            search = int(response)
+        except ValueError:
+            print("You entered an invalid value. \
+You must enter an integer.")
+            print("Please restart the program and try again.")
+        else:
+            f.get_leib_list()
+            f.search_leib_list(search)
+
+            
+main()
+
